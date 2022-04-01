@@ -1,0 +1,242 @@
+:root {
+    --nord0: #2E3440;
+    --nord1: #3B4252;
+    --nord2: #434C5E;
+    --nord3: #4C566A;
+    --nord4: #D8DEE9;
+    --nord5: #E5E9F0;
+    --nord6: #ECEFF4;
+    --nord7: #8FBCBB;
+    --nord8: #88C0D0;
+    --nord9: #81A1C1;
+    --nord10: #5E81AC;
+    --nord11: #BF616A;
+    --nord12: #D08770;
+    --nord13: #EBCB8B;
+    --nord14: #A3BE8C;
+    --nord15: #B48EAD;
+}
+
+html {
+    font-family: 'Fira Code', monospace;
+    background-color: #3B4252;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.sticky {
+    text-align: center;
+    background-color: #2E3440;
+    color: #D8DEE9;
+    height: max-content;
+    position: sticky;
+    top: 0;
+}
+
+.sticky-item {
+    float: left;
+    width: 20%;
+    display: inline-flex;
+    place-items: center;
+    place-content: center;
+    height: 2.5em;
+    color: #D8DEE9;
+    text-decoration: none;
+    font-size: 2em;
+    border-radius: 2em;
+    margin-bottom: 0.2em;
+    transition: 0.5s all;
+}
+
+#scrollIndicator {
+    width: 16%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 0.7rem;
+    position: absolute;
+    bottom: 2px;
+    background-color: var(--nord11);
+    border-radius: 1em;
+    transition: 0.5s all;
+    transform: translateX(0%);
+    z-index: 10;
+}
+
+.sticky-item::after {
+    content: '';
+    width: 16%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 0.7rem;
+    position: absolute;
+    bottom: 2px;
+    background-color: transparent;
+    border-radius: 1em;
+    transition: 0.5s all;
+}
+
+.sticky-item:hover::after {
+    content: '';
+    background-color: var(--nord10);
+}
+
+.sticky-aside {
+    position: fixed;
+    top: 20rem;
+    width: 24rem;
+    height: 10rem;
+    background-color: #2E3440;
+}
+
+.aside-indicator {
+    position: absolute;
+    left: 0.3em;
+    top: 0;
+    width: 1em;
+    background-color: #BF616A;
+    border-radius: 1em;
+    height: 40%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    transition: 0.5s all;
+    transform: translateY(0%);
+}
+
+.aside-item {
+    width: 100%;
+    height: 50%;
+    color: #D8DEE9;
+    font-size: 2em;
+    display: flex;
+    place-items: center;
+    place-content: left;
+    padding-left: 0.5em;
+    cursor: pointer;
+    transition: 0.5s all;
+    overflow: hidden;
+    position: relative;
+}
+
+.aside-item:hover {
+    overflow: visible;
+}
+
+.hidden-menu {
+    width: 15em;
+    height: 8em;
+    background-color: #2e344083;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+.column {
+    cursor: initial;
+    padding: 5%;
+    width: calc(100%/3);
+    float: left;
+}
+
+.column-header {
+    text-emphasis: bold;
+}
+
+.column-item {
+    color: #D8DEE9;
+    text-decoration: none;
+}
+
+.aside-item-text {
+    transition: 0.5s all;
+}
+
+.aside-item:hover>.aside-item-text {
+    transform: translateX(20px);
+}
+
+.selected {
+    transform: translateX(30px);
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #2E3440;
+    color: #D8DEE9;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 4em;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    height: auto;
+    margin-top: 80px;
+    padding-bottom: 80px;
+}
+
+article {
+    width: 800px;
+    height: 400px;
+    background-color: #2E3440;
+    margin: auto;
+    color: #D8DEE9;
+}
+
+.main-article-container {
+    padding: 10px;
+}
+
+.main-article-content-container {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+article p {
+    display: inline-block;
+    width: 50%;
+}
+
+article img {
+    display: inline-block;
+    width: 45%;
+}
+
+[id^="kapibara"] {
+    scroll-margin-top: 6em;
+}
+
+#kapibara2 {
+    background-color: #BF616A;
+}
+
+#kapibara3 {
+    background-color: #D08770;
+}
+
+#kapibara4 {
+    background-color: #A3BE8C;
+}
+
+#kapibara5 {
+    background-color: #B48EAD;
+}
